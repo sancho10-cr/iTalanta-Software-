@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Manager Dashboard</h1>
+    </header>
+    <main>
+        <section id="summary">
+            <h2>Summary</h2>
+            <div id="task-completion-rate"></div>
+            <div id="department-performance"></div>
+            <div id="pending-tasks"></div>
+        </section>
+        <section id="departments">
+            <h2>Departments</h2>
+            <form id="department-form">
+                <label for="department-name">Department Name:</label>
+                <input type="text" id="department-name" required>
+                <button type="submit">Create Department</button>
+            </form>
+            <ul id="department-list"></ul>
+        </section>
+        <section id="tasks">
+            <h2>Tasks</h2>
+            <form id="task-form">
+                <label for="task-title">Task Title:</label>
+                <input type="text" id="task-title" required>
+                <label for="task-description">Task Description:</label>
+                <textarea id="task-description" required></textarea>
+                <label for="assigned-to">Assign To:</label>
+                <select id="assigned-to" required>
+                    <!-- Options populated dynamically with employees -->
+                </select>
+                <label for="task-due-date">Due Date:</label>
+                <input type="date" id="task-due-date" required>
+                <label for="recurring-task">Recurring Task:</label>
+                <input type="checkbox" id="recurring-task">
+                <label for="recurrence-interval">Recurrence Interval:</label>
+                <select id="recurrence-interval" disabled>
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                </select>
+                <button type="submit">Create Task</button>
+            </form>
+            <ul id="task-list"></ul>
+        </section>
+        <section id="employee-management">
+            <h2>Employee Management</h2>
+            <ul id="employee-list"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+    <script src="initialize.js"></script>
+    <script src="manager_scripts.js"></script>
+</body>
+</html>
